@@ -1,0 +1,57 @@
+.actions {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.acceptButton,
+.declineButton {
+  min-height: 6rem;
+  border: 0.0625rem solid var(--color-border);
+  border-radius: var(--radius-card);
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  text-align: left;
+  transition:
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+.acceptButton {
+  background: var(--color-surface-contrast);
+  color: var(--color-text-inverse);
+}
+
+.declineButton {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.acceptButton:hover,
+.acceptButton:focus-visible,
+.declineButton:hover,
+.declineButton:focus-visible {
+  border-color: var(--color-accent-ink);
+  box-shadow: var(--shadow-focus);
+}
+
+.acceptButton span,
+.declineButton span {
+  font-size: var(--font-size-3);
+  font-weight: 900;
+}
+
+.acceptButton small,
+.declineButton small {
+  font-size: var(--font-size-1);
+}
+
+.error {
+  border: 0.0625rem solid var(--color-error);
+  border-radius: var(--radius-card);
+  background: var(--color-error-bg);
+  color: var(--color-error);
+  font-weight: 700;
+  padding: var(--space-4);
+}

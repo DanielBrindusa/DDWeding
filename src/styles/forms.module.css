@@ -1,0 +1,122 @@
+.form {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.section {
+  border: 0.0625rem solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-soft);
+}
+
+.sectionTitle {
+  margin: 0 0 var(--space-2);
+  font-size: var(--font-size-3);
+}
+
+.sectionDescription {
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-4);
+}
+
+.fieldGrid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.label {
+  font-weight: 800;
+}
+
+.hint {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-0);
+  margin: 0;
+}
+
+.control {
+  width: 100%;
+  min-height: var(--touch-target);
+  border: 0.0625rem solid var(--color-border-strong);
+  border-radius: var(--radius-control);
+  background: var(--color-surface);
+  padding: var(--space-3);
+}
+
+.textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.choiceList {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.choice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  min-height: var(--touch-target);
+  border: 0.0625rem solid var(--color-border);
+  border-radius: var(--radius-control);
+  padding: var(--space-3);
+  background: var(--color-surface);
+}
+
+.choice input {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.15rem;
+  accent-color: var(--color-accent-ink);
+}
+
+.choiceText {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.choiceText span:first-child {
+  font-weight: 800;
+}
+
+.inlineFields {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.errorText {
+  color: var(--color-error);
+  font-weight: 700;
+  margin: 0;
+}
+
+.errorSummary {
+  border: 0.125rem solid var(--color-error);
+  border-radius: var(--radius-card);
+  background: var(--color-error-bg);
+  padding: var(--space-4);
+}
+
+.errorSummary h2 {
+  margin: 0 0 var(--space-2);
+  font-size: var(--font-size-2);
+}
+
+.errorSummary ul {
+  margin: 0;
+  padding-left: var(--space-6);
+}
+
+@media (min-width: 48rem) {
+  .inlineFields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
