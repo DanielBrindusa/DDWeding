@@ -96,6 +96,15 @@ The current demo adapter uses fictional fixtures plus a versioned storage wrappe
 
 The workflow at `.github/workflows/deploy-pages.yml` builds the Vite app and publishes `dist` to GitHub Pages.
 
+One-time GitHub setting required:
+
+1. Open the repository on GitHub.
+2. Go to Settings > Pages.
+3. Set Build and deployment > Source to GitHub Actions.
+4. Rerun the `Build and Deploy GitHub Pages` workflow, or push a new commit to `main`.
+
+If Pages is not enabled or is still set to a branch source, the workflow will still run lint, tests, and build, then skip deployment with a warning instead of failing at the Pages configuration step.
+
 The app uses `HashRouter`, so direct route visits work on GitHub Pages without server-side rewrites. Vite uses relative asset paths by default, which keeps the app compatible with repository subpaths.
 
 ## Major Future Decisions
